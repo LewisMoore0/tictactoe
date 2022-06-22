@@ -1,16 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 
 class Square extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            value: null,
-        };
-    }
+
     render() { 
       return (
-        <button className="square" onClick={ () => { console.log('click') }}>
+        <button
+         className="square"
+         onClick={ () => this.props.onClick()}
+         >
           {this.props.value}
         </button>
       );
